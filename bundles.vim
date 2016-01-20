@@ -114,6 +114,7 @@ NeoBundle 'elixir-lang/vim-elixir'
 NeoBundle 'fatih/vim-go'
 NeoBundle 'ekalinin/Dockerfile.vim'
 NeoBundle 'groenewege/vim-less'
+NeoBundle 'corylanou/vim-present'
 
 " Support and minor
 NeoBundle 'ervandew/screen'
