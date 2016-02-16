@@ -95,10 +95,12 @@ NeoBundle 'josemarluedke/vim-rspec'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'tpope/vim-vividchalk'
 NeoBundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+
 " Automatically switch themes for day/night
 NeoBundle 'amdt/sunset'
 
 " syntax support
+NeoBundle 'peterhoeg/vim-qml'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'tsaleh/vim-tmux'
 NeoBundle 'Puppet-Syntax-Highlighting'
@@ -116,6 +118,7 @@ NeoBundle 'elixir-lang/vim-elixir'
 NeoBundle 'fatih/vim-go'
 NeoBundle 'ekalinin/Dockerfile.vim'
 NeoBundle 'groenewege/vim-less'
+NeoBundle 'tpope/vim-liquid'
 NeoBundle 'corylanou/vim-present'
 
 " Support and minor
