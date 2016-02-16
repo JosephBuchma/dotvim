@@ -95,6 +95,8 @@ NeoBundle 'josemarluedke/vim-rspec'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'tpope/vim-vividchalk'
 NeoBundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+" Automatically switch themes for day/night
+NeoBundle 'amdt/sunset'
 
 " syntax support
 NeoBundle 'vim-ruby/vim-ruby'
