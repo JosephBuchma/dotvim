@@ -1,0 +1,142 @@
+let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
+argglobal
+let s:cpo_save=&cpo
+set cpo&vim
+imap <buffer> <S-BS> <Plug>delimitMateS-BS
+imap <buffer> <BS> <Plug>delimitMateBS
+nmap <buffer> gf <Plug>RailsTabFind
+nmap <buffer>  <Plug>RailsSplitFind
+nmap <buffer> f <Plug>RailsSplitFind
+nnoremap <buffer> <silent> K :GoDoc
+xnoremap <buffer> af :call go#textobj#Function('a')
+onoremap <buffer> af :call go#textobj#Function('a')
+nmap <buffer> gf <Plug>RailsFind
+nnoremap <buffer> <silent> gd :GoDef
+xnoremap <buffer> if :call go#textobj#Function('i')
+onoremap <buffer> if :call go#textobj#Function('i')
+imap <buffer> <silent> g <Plug>delimitMateJumpMany
+imap <buffer>  <Plug>delimitMateBS
+cmap <buffer>  <Plug><cfile>
+imap <buffer>   <Plug>delimitMateSpace
+imap <buffer> " <Plug>delimitMate"
+imap <buffer> ' <Plug>delimitMate'
+imap <buffer> ( <Plug>delimitMate(
+imap <buffer> ) <Plug>delimitMate)
+imap <buffer> [ <Plug>delimitMate[
+imap <buffer> ] <Plug>delimitMate]
+imap <buffer> ` <Plug>delimitMate`
+imap <buffer> { <Plug>delimitMate{
+imap <buffer> } <Plug>delimitMate}
+let &cpo=s:cpo_save
+unlet s:cpo_save
+setlocal keymap=
+setlocal noarabic
+setlocal autoindent
+setlocal balloonexpr=
+setlocal binary
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
+setlocal nocindent
+setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
+setlocal cinoptions=:0,(s,u0,U1,g0,t0
+setlocal cinwords=if,else,while,do,for,switch
+setlocal colorcolumn=
+setlocal comments=s1:/*,mb:*,ex:*/,://
+setlocal commentstring=//\ %s
+setlocal complete=.,w,b,u,t,i
+setlocal concealcursor=
+setlocal conceallevel=0
+setlocal completefunc=
+setlocal nocopyindent
+setlocal cryptmethod=
+setlocal nocursorbind
+setlocal nocursorcolumn
+setlocal nocursorline
+setlocal define=
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=%\\S%\\+\ \ %#%[cefi]%[rxod]%[eir]%[a-z]%#%\\x1b[0m\ %\\+%\\S%\\+%$%\\&%\\x1b%\\S%\\+\ \ %#%m%\\>%\\x1b[0m\ \ %#%f,%\\s\ %#%[cefi]%[rxod]%[eir]%[a-z]%#\ %\\+%\\S%\\+%$%\\&%\\s\ %#%m%\\>\ \ %#%f,Overwrite%.%#%\\S%\\+\ \ %#%m%\\x1b[0m\ \ %#%f,%-GOverwrite%.%#\"h\"%.%#,%.%#rails\ test\ %f:%l,%+GCurrent\ version:%.%#,%+G\ %#Status\ %#Migration\ ID%.%#,%+G\ The\ fixture\ ID\ for\ %.%#,%f:\ %s\ (%m)%$%\\&%.%#/fixtures/%.%#(%\\d%\\+),%+G\ %#Prefix\ %#Verb%.%#,%+G\ %#Code\ LOC:\ %.%#,%+GAbout\ your\ application's\ environment,%+Grun\ %\\S%#::Application.routes,%+Irails\ %\\S%\\+%\\s%\\+#\ %.%#,%+Eruby:%.%#(LoadError),%+EUsage:%.%#,%+ECould\ not\ find\ generator%.%#,%+EType\ 'rails'\ for\ help.,%D(in\ %f),%\\s%#from\ %f:%l:%m,%\\s%#from\ %f:%l:,%\\s%##\ %f:%l:%m,%\\s%##\ %f:%l,%\\s%#[%f:%l:\ %#%m,%\\s%#%f:%l:\ %#%m,%\\s%#%f:%l:,%m\ [%f:%l]:,%+Erake\ aborted!,%+EDon't\ know\ how\ to\ build\ task\ %.%#,%+Einvalid\ option:%.%#,%+Irake\ %\\S%\\+%\\s%\\+#\ %.%#,chdir\ /home/jbuchma/solanolabs/tddium_site
+setlocal noexpandtab
+if &filetype != 'go'
+setlocal filetype=go
+endif
+setlocal foldcolumn=0
+setlocal nofoldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=9
+setlocal foldmarker={{{,}}}
+setlocal foldmethod=indent
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=
+setlocal formatoptions=cq
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal grepprg=
+setlocal iminsert=2
+setlocal imsearch=2
+setlocal include=
+setlocal includeexpr=rails#includeexpr(v:fname)
+setlocal indentexpr=GoIndent(v:lnum)
+setlocal indentkeys=0{,0},:,0#,!^F,o,O,e,<:>,0=},0=)
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255
+setlocal keywordprg=
+setlocal nolinebreak
+setlocal nolisp
+setlocal list
+setlocal makeprg=bundle\ exec\ rake
+setlocal matchpairs=(:),{:},[:]
+setlocal nomodeline
+setlocal modifiable
+setlocal nrformats=octal,hex
+setlocal number
+setlocal numberwidth=3
+setlocal omnifunc=go#complete#Complete
+setlocal path=.,~/solanolabs/tddium_site/lib,~/solanolabs/tddium_site/vendor,~/solanolabs/tddium_site/app/models/concerns,~/solanolabs/tddium_site/app/controllers/concerns,~/solanolabs/tddium_site/app/controllers,~/solanolabs/tddium_site/app/helpers,~/solanolabs/tddium_site/app/mailers,~/solanolabs/tddium_site/app/models,~/solanolabs/tddium_site/app/*,~/solanolabs/tddium_site/app/views,~/solanolabs/tddium_site/spec,~/solanolabs/tddium_site/spec/controllers,~/solanolabs/tddium_site/spec/helpers,~/solanolabs/tddium_site/spec/mailers,~/solanolabs/tddium_site/spec/models,~/solanolabs/tddium_site/spec/views,~/solanolabs/tddium_site/spec/lib,~/solanolabs/tddium_site/spec/features,~/solanolabs/tddium_site/spec/requests,~/solanolabs/tddium_site/spec/integration,~/solanolabs/tddium_site/features,~/solanolabs/tddium_site/vendor/plugins/*/lib,~/solanolabs/tddium_site/vendor/plugins/*/test,~/solanolabs/tddium_site/vendor/rails/*/lib,~/solanolabs/tddium_site/vendor/rails/*/test,~/solanolabs/tddium_site,~/solanolabs/tddium_site/lib,~/solanolabs/tddium_site/vendor,~/solanolabs/tddium_site/app/models/concerns,~/solanolabs/tddium_site/app/controllers/concerns,~/solanolabs/tddium_site/app/controllers,~/solanolabs/tddium_site/app/helpers,~/solanolabs/tddium_site/app/mailers,~/solanolabs/tddium_site/app/models,~/solanolabs/tddium_site/app/*,~/solanolabs/tddium_site/app/views,~/solanolabs/tddium_site/spec,~/solanolabs/tddium_site/spec/controllers,~/solanolabs/tddium_site/spec/helpers,~/solanolabs/tddium_site/spec/mailers,~/solanolabs/tddium_site/spec/models,~/solanolabs/tddium_site/spec/views,~/solanolabs/tddium_site/spec/lib,~/solanolabs/tddium_site/spec/features,~/solanolabs/tddium_site/spec/requests,~/solanolabs/tddium_site/spec/integration,~/solanolabs/tddium_site/features,~/solanolabs/tddium_site/vendor/plugins/*/lib,~/solanolabs/tddium_site/vendor/plugins/*/test,~/solanolabs/tddium_site/vendor/rails/*/lib,~/solanolabs/tddium_site/vendor/rails/*/test,~/solanolabs/tddium_site,/usr/include,,~/.rvm/gems/ruby-1.9.3-p551/gems/activerecord-postgres-hstore-0.4.1/app/*,~/.rvm/gems/ruby-1.9.3-p551/gems/bourbon-3.1.8/app/*,~/.rvm/gems/ruby-1.9.3-p551/gems/devise-2.0.6/app/*,~/.rvm/gems/ruby-1.9.3-p551/gems/devise_invitable-1.0.3/app/*,~/.rvm/gems/ruby-1.9.3-p551/gems/flutie-1.3.3/app/*,~/.rvm/gems/ruby-1.9.3-p551/gems/multi-select-rails-0.9.11/app/*,~/.rvm/gems/ruby-1.9.3-p551/gems/xray-rails-0.1.16/app/*,~/.rvm/gems/ruby-1.9.3-p551/bundler/gems/ansible-00429b2152d1/lib,~/.rvm/gems/ruby-1.9.3-p551/bundler/gems/cfoundry-a9fa680f1332/lib,~/.rvm/gems/ruby-1.9.3-p551/bundler/gems/docs-admin-ce449a6975c4/lib,~/.rvm/gems/ruby-1.9.3-p551/bundler/gems/faye_server-038a677062e5/lib,~/.rvm/gems/ruby-1.9.3-p551/bundler/gems/github-f36b17b28f6b/lib,~/.rvm/gems/ruby-1.9.3-p551/bundler/gems/jshint_on_rails-641dc839f805/lib,~/.rvm/gems/ruby-1.9.3-p551/bundler/gems/kibana-sinatra-7bd3d6488009/lib,~/.rvm/gems/ruby-1.9.3-p551/bundler/gems/omniauth-github-91f287a70092/lib,~/.rvm/gems/ruby-1.9.3-p551/bundler/gems/omniauth-uaa-oauth2-5a8ceaff4208/lib,~/.rvm/gems/ruby-1.9.3-p551/bundler/gems/pg-hstore-6af486a0abc1/lib,~/.rvm/gems/ruby-1.9.3-p551/bundler/gems/redis_failover-6d9754d09618/lib,~/.rvm/gems/ruby-1.9.3-p551/bundler/gems/spork-224df492657e/lib,~/.rvm/gems/ruby-1.9.3-p551/bundler/gems/system_data-5937a6d9dbef/lib,~/.rvm/gems/ruby-1.9.3-p551/bundler/gems/zk-eventmachine-873ef2e2f9db/lib,~/.rvm/gems/ruby-1.9.3-p551/gems/Ascii85-1.0.1/lib,~/.rvm/gems/ruby-1.9.3-p551/gems/CFPropertyList-2.3.2/lib,~/.rvm/gems/ruby-1.9.3-p551/gems/actionmailer-3.2.22/lib,~/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.2.22/lib,~/.rvm/gems/ruby-1.9.3-p551/gems/activemodel-3.2.22/lib,~/.rvm/gems/ruby-1.9.3-p551/gems/activerecord-3.2.22/lib,~/.rvm/gems/ruby-1.9.3-p551/gems/activerecord-postgres-hstore-0.4.1/lib,~/.rvm/gems/ruby-1.9.3-p551/gems/activeresource-3.2.22/lib,~/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.2.22/lib,~/.rvm/gems/ruby-1.9.3-p551/gems/acts_as_commentable_with_threading-1.2.0/lib,~/.rvm/gems/ruby-1.9.3-p551/gems/addressable-2.3.8/lib,~/.rvm/gems/ruby-1.9.3-p551/gems/algorithms-0
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+setlocal norelativenumber
+setlocal norightleft
+setlocal rightleftcmd=search
+setlocal noscrollbind
+setlocal shiftwidth=4
+setlocal noshortname
+setlocal nosmartindent
+setlocal softtabstop=0
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal statusline=%!airline#statusline(2)
+setlocal suffixesadd=.rb
+setlocal noswapfile
+setlocal synmaxcol=3000
+if &syntax != 'go'
+setlocal syntax=go
+endif
+setlocal tabstop=4
+setlocal tags=~/solanolabs/tddium_site/tags,~/solanolabs/tddium_site/tmp/tags,~/solanolabs/tddium_site/tags,~/solanolabs/tddium_site/tmp/tags,~/solanolabs/tddium_site/tags,~/solanolabs/tddium_site/tmp/tags,./tags,./TAGS,tags,TAGS,~/.rvm/gems/ruby-1.9.3-p551/bundler/gems/ansible-00429b2152d1/tags,~/.rvm/gems/ruby-1.9.3-p551/bundler/gems/cfoundry-a9fa680f1332/tags,~/.rvm/gems/ruby-1.9.3-p551/bundler/gems/docs-admin-ce449a6975c4/tags,~/.rvm/gems/ruby-1.9.3-p551/bundler/gems/faye_server-038a677062e5/tags,~/.rvm/gems/ruby-1.9.3-p551/bundler/gems/github-f36b17b28f6b/tags,~/.rvm/gems/ruby-1.9.3-p551/bundler/gems/jshint_on_rails-641dc839f805/tags,~/.rvm/gems/ruby-1.9.3-p551/bundler/gems/kibana-sinatra-7bd3d6488009/tags,~/.rvm/gems/ruby-1.9.3-p551/bundler/gems/omniauth-github-91f287a70092/tags,~/.rvm/gems/ruby-1.9.3-p551/bundler/gems/omniauth-uaa-oauth2-5a8ceaff4208/tags,~/.rvm/gems/ruby-1.9.3-p551/bundler/gems/pg-hstore-6af486a0abc1/tags,~/.rvm/gems/ruby-1.9.3-p551/bundler/gems/redis_failover-6d9754d09618/tags,~/.rvm/gems/ruby-1.9.3-p551/bundler/gems/spork-224df492657e/tags,~/.rvm/gems/ruby-1.9.3-p551/bundler/gems/system_data-5937a6d9dbef/tags,~/.rvm/gems/ruby-1.9.3-p551/bundler/gems/zk-eventmachine-873ef2e2f9db/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/Ascii85-1.0.1/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/CFPropertyList-2.3.2/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/actionmailer-3.2.22/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.2.22/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/activemodel-3.2.22/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/activerecord-3.2.22/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/activerecord-postgres-hstore-0.4.1/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/activeresource-3.2.22/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.2.22/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/acts_as_commentable_with_threading-1.2.0/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/addressable-2.3.8/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/algorithms-0.5.0/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/annotate-2.6.5/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/arel-3.0.3/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/aruba-0.3.6/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/ast-2.1.0/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/astrolabe-1.3.1/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/awesome_nested_set-2.1.6/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/awesome_print-1.1.0/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/azure-0.6.4/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/bcrypt-ruby-3.1.2/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/bond-0.5.1/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/bootstrap-sass-3.3.1.0/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/bourbon-3.1.8/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/brakeman-3.0.5/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/builder-3.0.4/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/bundler-audit-0.3.1/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/capistrano-2.15.4/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/capistrano-ext-1.2.1/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/capybara-2.4.4/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/capybara-mechanize-1.0.1/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/capybara-screenshot-1.0.5/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/capybara-webkit-1.4.1/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/cf-uaa-lib-2.0.1/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/childprocess-0.5.6/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/chronic-0.10.2/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/coderay-1.0.5/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/coffee-rails-3.2.2/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/coffee-script-2.4.1/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/coffee-script-source-1.9.1.1/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/colored-1.2/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/cookiejar-0.3.2/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/crack-0.4.2/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/csv_builder-2.1.1/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/cucumber-1.3.14/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/cucumber-rails-1.4.0/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/daemons-1.1.9/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/dalli-2.0.4/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/database_cleaner-1.2.0/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/deferred-0.5.4/tags,~/.rvm/gems/ruby-1.9.3-p551/gems/delayed_job-3.0.5/tags,~/.
+setlocal textwidth=0
+setlocal thesaurus=
+setlocal undofile
+setlocal nowinfixheight
+setlocal nowinfixwidth
+setlocal nowrap
+setlocal wrapmargin=0
+20
+normal! zo
+let s:l = 71 - ((43 * winheight(0) + 27) / 54)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+71
+normal! 06|
+let &so = s:so_save | let &siso = s:siso_save
+doautoall SessionLoadPost
+" vim: set ft=vim :
