@@ -28,8 +28,8 @@ NeoBundle 'YankRing.vim'
 NeoBundle 'tpope/vim-fugitive'
 " syntax checking on save
 NeoBundle 'scrooloose/syntastic'
-" TextMate-style snippets
-NeoBundle 'msanders/snipmate.vim'
+" Another snippets
+NeoBundle 'sirver/ultisnips'
 " manipulation of surraunding parens, quotes, etc.
 NeoBundle 'tpope/vim-surround'
 " vertical alignment tool
@@ -124,6 +124,9 @@ NeoBundle 'corylanou/vim-present'
 
 " Support and minor
 NeoBundle 'ervandew/screen'
+
+" Drawing
+NeoBundle 'DrawIt'
 
 " Support for user-defined text objects
 NeoBundle 'kana/vim-textobj-user'
