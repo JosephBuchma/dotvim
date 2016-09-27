@@ -91,6 +91,9 @@ NeoBundle 'josemarluedke/vim-rspec'
 " RuboCop
 " NeoBundle 'ngmy/vim-rubocop'
 
+"Emmet html shortcuts (:Tag div.lol>span ....)
+NeoBundle 'mattn/emmet-vim'
+
 
 " color themes
 NeoBundle 'altercation/vim-colors-solarized'
