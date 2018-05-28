@@ -26,8 +26,6 @@ NeoBundle 'taglist.vim'
 NeoBundle 'YankRing.vim'
 " git integration
 NeoBundle 'tpope/vim-fugitive'
-" syntax checking on save
-NeoBundle 'scrooloose/syntastic'
 " Another snippets
 NeoBundle 'sirver/ultisnips'
 " manipulation of surraunding parens, quotes, etc.
@@ -104,6 +102,7 @@ NeoBundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 "NeoBundle 'amdt/sunset'
 
 " syntax support
+NeoBundle 'tpope/vim-abolish'
 NeoBundle 'peterhoeg/vim-qml'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'tsaleh/vim-tmux'
@@ -113,23 +112,48 @@ NeoBundle 'tpope/vim-cucumber'
 NeoBundle 'tpope/vim-haml'
 NeoBundle 'tpope/vim-markdown'
 NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'vitaly/vim-syntastic-coffee'
 NeoBundle 'vim-scripts/jade.vim'
 NeoBundle 'wavded/vim-stylus'
 NeoBundle 'VimClojure'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'elixir-lang/vim-elixir'
 NeoBundle 'fatih/vim-go'
+
+NeoBundle "nsf/gocode"
+NeoBundle "Blackrush/vim-gocode"
+NeoBundle "Shougo/neocomplete"
+NeoBundle "Shougo/echodoc.vim"
+
+NeoBundle 'jodosha/vim-godebug'
 NeoBundle 'ekalinin/Dockerfile.vim'
 NeoBundle 'groenewege/vim-less'
 NeoBundle 'tpope/vim-liquid'
 NeoBundle 'corylanou/vim-present'
+NeoBundle 'leafgarland/typescript-vim'
+NeoBundle 'quramy/tsuquyomi'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'mxw/vim-jsx'
+NeoBundleLazy 'flowtype/vim-flow', {
+        \ 'autoload': {
+        \     'filetypes': 'javascript'
+        \ }}
+NeoBundle 'mephux/vim-jsfmt'
+NeoBundle 'cespare/vim-toml'
+
 
 " Support and minor
 NeoBundle 'ervandew/screen'
 
+" NeoBundle 'sourcegraph/sourcegraph-vim'
+
+" Highlight current line (:ConoLineToggle)
+NeoBundle 'miyakogi/conoline.vim'
+
 " Drawing
 NeoBundle 'DrawIt'
+
+" Slack
+NeoBundle 'heavenshell/vim-slack'
 
 " Support for user-defined text objects
 NeoBundle 'kana/vim-textobj-user'
@@ -141,6 +165,8 @@ NeoBundle 'vitaly/vim-gitignore'
 NeoBundle 'scrooloose/vim-space'
 " Github's gist support
 NeoBundle 'mattn/gist-vim'
+" GithubLink
+NeoBundle 'ruanyl/vim-gh-line'
 " web APIs support
 NeoBundle 'mattn/webapi-vim'
 
@@ -160,6 +186,9 @@ NeoBundle 'Shougo/vimproc.vim', {
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/unite-outline'
 NeoBundle 'ujihisa/unite-colorscheme'
+
+NeoBundle 'editorconfig/editorconfig-vim'
+NeoBundle 'w0rp/ale'
 
 call neobundle#end()
 
